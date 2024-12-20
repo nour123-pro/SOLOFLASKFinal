@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap");
+@import url('https://fonts.cdnfonts.com/css/signpainter');
+
+
+
+
+/* Container Styles */
+.container {
+    width: 100%;
+    max-width: 400px;
+    margin: 100px auto;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 2px rgba(100, 100, 100, 0.1);
+    backdrop-filter: blur(5.5px);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    margin-top: auto;
+   
+
+}
+
+/* Header Styles */
+.container h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #007bff;
+}
+
+/* Input Styles */
+.input-group {
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+/* Button Styles */
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Options Styles */
+.options {
+    text-align: center;
+}
+
+.options p {
+    margin-bottom: 10px;
+    font-size: 10px;
+    color: #091a2c;
+}
+
+.options a {
+    color: #091a2c;
+    text-decoration: none;
+}
+
+.options a:hover {
+    text-decoration: underline;
+}
+
+
+.form{
+    width:fit-content;
+    align-self: center;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align items at the top */
+    margin-top: 40px; /* Adjust based on the height of the navigation bar */
+    height: 800px;
+   
+}
+.container {
+    width: 100%;
+    max-width:fit-content;
+    margin: auto;
+    padding: 1rem;
+   
+
+    border-radius: 5px;
+    box-shadow: 0 0 10px 2px rgba(100, 100, 100, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 700px;
+}

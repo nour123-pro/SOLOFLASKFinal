@@ -1,0 +1,191 @@
+main {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align items at the top */
+    margin-top: 40px; /* Adjust based on the height of the navigation bar */
+    height: 600px;
+    font-family: "Dream Avenue",sans-serif;
+}
+
+p {
+    font-size: 10px; /* Adjust font size */
+    color:black; /* Set text color to black */
+    line-height: 1; /* Set line height */
+    margin: 1px 0; /* Adjust top and bottom margin */
+    background: size 1px;
+    background-color:rgb(0, 0, 0);
+    text-size-adjust:1px;
+    border-radius: 15px;
+}
+p:hover{
+    transform: scale(1.05);
+}
+h1 {
+    font-family: "Dream Avenue",sans-serif; /* Use a professional sans-serif font */
+    font-size: 36px; /* Increase font size */
+    color: #333; /* Use a dark grey color for the text */
+    text-align: center; /* Center the text */
+    margin-bottom: 20px; /* Add some space below the heading */
+    position: relative; /* Necessary for the pseudo-element */
+}
+
+h1::after {
+    font-family: "Dream Avenue",sans-serif;
+    content: '';
+    display: block;
+    width: 80px; /* Increase the width of the line */
+    height: 4px; /* Adjust the height if necessary */
+    background-color: #d0e1f2; /* Use a professional blue color */
+    margin: 10px auto 0; /* Center the line and add some space above */
+    border-radius: 2px; /* Slightly round the corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for depth */
+}
+/* Container Styling */
+.container {
+    max-width: 900px;
+    width: 100%;
+    background-color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 40px;
+    margin: 20px auto;
+    transition: box-shadow 0.3s ease-in-out;
+    font-family: "Dream Avenue",sans-serif;
+}
+
+.container:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Reservations and Feedbacks Styling */
+.reservations, .feedbacks {
+    background-color: #f9f9f9;
+    padding: 25px 30px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    border-left: 4px solid #b2cbe7;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease-in-out;
+    font-family: "Dream Avenue",sans-serif;
+}
+
+.reservations:hover, .feedbacks:hover {
+    transform: translateY(-5px);
+}
+
+.reservations h3, .feedbacks h3 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+    font-family: "Dream Avenue",sans-serif;
+}
+
+.reservations ul, .feedbacks ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-family: "Dream Avenue",sans-serif;
+}
+
+.reservations ul li, .feedbacks ul li {
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+    font-size: 1rem;
+    line-height: 1.6;
+    font-family: "Dream Avenue",sans-serif;
+}
+
+.reservations ul li:last-child, .feedbacks ul li:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+    font-family: "Dream Avenue",sans-serif;
+}
+
+.profile-info {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+    font-family: "Dream Avenue",sans-serif;
+}
+
+.profile-info h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-family: "Dream Avenue",sans-serif;
+}
+
+.profile-info p {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.reservations, .feedbacks {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 30px;
+}
+
+.reservations h3, .feedbacks h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.reservations ul, .feedbacks ul {
+    list-style: none;
+    padding: 0;
+}
+
+.reservations ul li, .feedbacks ul li {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+}
+
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+   
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 500px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.profile-info {
+    margin: 20px 0;
+}
+
+.profile-info h2 {
+    margin: 0 0 10px;
+}
+
+.profile-info p {
+    margin: 5px 0;
+}
+
+.actions {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.actions .btn {
+    padding: 10px 20px;
+    background-color: #8cc3ff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.actions .btn:hover {
+    background-color: #05121f26;
+}

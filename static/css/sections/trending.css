@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Spicy+Rice&display=swap');
+
+.trending {
+  
+ width:100%;
+ height:800px;
+ position: relative;
+  display: flex;
+
+}
+.myvideo{
+  width: 100%; /* Set the width of the video to fill the container */
+    height: 100%; /* Set the height of the video to fill the container */
+    object-fit: cover; /* Cover the entire container with the video */
+    position: absolute; /* Position the video absolutely within the container */
+    top: 0; /* Align the video to the top of the container */
+    left: 0; /* Align the video to the left of the container */
+    z-index: -1; /
+   
+}
+
+.overlay-button {
+  position: absolute; /* Position the button absolutely within the container */
+  
+  z-index: 1; /* Set a higher z-index to ensure the button is above the video */
+  background-color: rgba(255, 255, 255, 0.5); /* Button background color with transparency */
+  padding: 5px; /* Adjust padding as needed */
+  border: none; /* Remove button border */ 
+  border-radius: 5px; /* Apply border radius for rounded corners */
+  cursor: pointer; 
+  justify-content: center; /* Center horizontally */
+  align-items: center; 
+  bottom: 10rem;
+  left:44rem;
+  padding: 10px 28px;
+  
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    width:10rem;
+    height:4rem;
+   
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 46px;
+  
+    font-size: 16px;
+    font-weight: 300px;
+    line-height: 25px;
+    font-family: var(--plus-jakarta-sans);
+    color:var(--black-300);
+    cursor: pointer;
+    background-image: url(/static/assets/Above\ the\ Clouds.jpeg);
+   
+}

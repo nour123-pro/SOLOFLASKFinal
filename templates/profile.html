@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block content %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/profile.css') }}">
+<section class='main'>       
+     <h1>Profile Card:</h1>
+
+    <div class="container">
+        <div class="profile-info">
+            <h2>Welcome, {{ user.FirstName }} {{ user.LastName }}!</h2>
+            <p><strong>Email:</strong> {{ user.Email }}</p>
+            <p><strong>Age:</strong> {{ user.Age }}</p>
+            <p><strong>Nationality:</strong> {{ user.Nationality }}</p>
+        </div>
+
+        <div class="reservations">
+            <h3>Your Reservations:</h3>
+            <ul>
+                {% for reservation, hotel in reservations %}
+                    <li>
+                        Hotel: {{ hotel.Name }}<br>
+                        Check-in: {{ reservation.CheckInDate }}<br>
+                        Check-out: {{ reservation.CheckOutDate }}<br>
+                        Room Type: {{ reservation.RoomType }}<br>
+                        Number of People: {{ reservation.NumberPeople }}<br>
+                        Number of Rooms: {{ reservation.NumberRoom }}<br>
+                    </li>
+                {% endfor %}
+            </ul>
+            {% if not reservations %}
+                <p>No reservations found.</p>
+            {% endif %}
+       
+
+        <div class="feedbacks">
+            <h3>Your Feedbacks:</h3>
+            <ul>
+                {% for feedback, hotel in feedbacks %}
+                    <li>
+                        Hotel: {{ hotel.Name }}<br>
+                        Rating: {{ feedback.Rating }}<br>
+                        Experience: {{ feedback.Experience }}<br>
+                        Suggestions: {{ feedback.Suggestions }}<br>
+                    </li>
+                {% endfor %}
+            </ul>
+            {% if not feedbacks %}
+                <p>No feedbacks found.</p>
+            {% endif %}
+        </div>
+
+        <div class="actions">
+            <a href="{{ url_for('logginout') }}" class="btn btn-primary">Logout</a>
+            <a href="{{ url_for('index') }}" class="btn btn-primary"> Reserve Hotel</a>
+        </div>
+    </div>
+</section>
+{% endblock %}

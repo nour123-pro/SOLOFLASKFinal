@@ -1,0 +1,819 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.cdnfonts.com/css/avenue');
+@font-face {
+    font-family: 'Dream Avenue';
+    src: url('path/to/dream-avenue-font.woff2') format('woff2'),
+         url('path/to/dream-avenue-font.woff') format('woff');
+    /* Add additional font formats (eot, ttf) if available */
+    font-weight: normal;
+    font-style: normal;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Dream Avenue', sans-serif;
+}
+
+body{
+    background-color: #030202;
+    background: linear-gradient(90deg, rgba(185,210,218,1) 13%, rgba(255,255,255,1) 98%);
+ 
+    
+   
+    
+   
+}
+
+.container{
+   background-color: #fff;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 100%;
+    height:339px;
+    margin-top: 2rem;
+   
+}
+.compressed{
+  
+    width:100%;
+    height:80%;
+   
+    filter: brightness(70%) contrast(130%);
+    display: flex;
+    flex-direction: row;
+}
+.pic1{
+    border-radius: 100% 100% 10% 10% / 100% 100% 10% 10% ;
+    height:100%;
+    width:100%;
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border:2px solid #c9d6ff;
+    margin-top: 1rem;
+    margin:3rem;
+    
+    
+
+}
+.pic2{
+    margin-top: 5rem;
+    
+    border-radius: 100% 100% 10% 10% / 100% 100% 10% 10% ;
+    
+    background-size: cover;
+    background-position: center;
+   
+    height:80%;
+    width:90%;
+    background-repeat: no-repeat;
+    border:2px solid #c9d6ff;
+    
+}
+.pic3{
+    margin-top: 6rem;
+   
+    border-radius: 100% 100% 10% 10% / 100% 100% 10% 10% ;
+    
+    background-size: cover;
+    background-position: center;
+    height:100%;
+    width:100%;
+    background-repeat: no-repeat;
+   
+    margin:3rem;
+    border:2px solid #c9d6ff;
+   
+   
+}
+.container p{
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.3px;
+    margin: 20px 0;
+}
+
+.container span{
+    font-size: 12px;
+}
+
+.container a{
+    color: #333;
+    font-size: 13px;
+    text-decoration: none;
+    margin: 15px 0 10px;
+}
+
+.container button{
+   
+    border-color: #ff0a0a;
+    padding: 10px 28px;
+  
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  
+   
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 46px;
+  
+    font-size: 16px;
+    font-weight: 300px;
+    line-height: 25px;
+    font-family: inherit;
+    color:rgb(27, 15, 1);
+    cursor: pointer;
+   background-color: transparent;
+   
+}
+.container button img{
+    width:30px;
+    height:40px;
+}
+button{
+ 
+    border-color: #ff0a0a;
+    padding: 10px 28px;
+  
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  
+   
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 46px;
+  
+    font-size: 16px;
+    font-weight: 300px;
+    line-height: 25px;
+    font-family: inherit;
+    color:rgb(27, 15, 1);
+    cursor: pointer;
+   
+}
+
+.container form{
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    height: 100%;
+}
+
+
+.form-container{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    transition: all 0.6s ease-in-out;
+}
+
+.sign-in{
+    left: 0;
+    width: 50%;
+    z-index: 2;
+    background-color: #030a1f;
+}
+.sign-up .compressed{
+   border-radius: 47% 55% 0% 51% / 100% 100% 10% 0% ;
+   width:45px;
+   height:540px;
+   background-color: #07080d;
+   background-image: url(image.png);
+}
+
+.container.active .sign-in{
+    transform: translateX(100%);
+}
+
+.sign-up{
+    left: 0;
+    width: 50%;
+    opacity: 0;
+    z-index: 1;
+}
+.sign-in h1{
+    font-size: 30px;
+}
+.container.active .sign-up{
+    transform: translateX(100%);
+    opacity: 1;
+    z-index: 5;
+    animation: move 0.6s;
+}
+
+@keyframes move{
+    0%, 49.99%{
+        opacity: 0;
+        z-index: 1;
+    }
+    50%, 100%{
+        opacity: 1;
+        z-index: 5;
+    }
+}
+
+.social-icons{
+    margin: 20px 0;
+}
+
+.social-icons a{
+    border: 1px solid #ccc;
+    border-radius: 20%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 3px;
+    width: 40px;
+    height: 40px;
+}
+
+.toggle-container{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    transition: all 0.6s ease-in-out;
+    border-radius: 150px 0 0 100px;
+    z-index: 1000;
+}
+
+.container.active .toggle-container{
+    transform: translateX(-100%);
+    border-radius: 0 150px 100px 0;
+}
+
+.toggle{
+    background-color: #000000;
+    height: 100%;
+    background: linear-gradient(to right, #8695eb, #ff9d9d);
+    background: linear-gradient(179.7deg, rgb(197, 214, 227) 2.9%, rgb(144, 175, 202) 97.1%);
+    color: #fff;
+    position: relative;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+}
+
+.container.active .toggle{
+    transform: translateX(50%);
+}
+
+.toggle-panel{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 30px;
+    text-align: center;
+    top: 0;
+    transform: translateX(0);
+    transition: all 0.6s ease-in-out;
+}
+
+.toggle-left{
+    transform: translateX(-200%);
+}
+
+.container.active .toggle-left{
+    transform: translateX(0);
+}
+
+.toggle-right{
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    right: 0;
+    transform: translateX(0);
+    width:50%;
+    height: max-content;
+}
+
+.container.active .toggle-right{
+    transform: translateX(200%);
+}
+
+
+.le{
+    display: flex;
+    flex-direction: row;
+    gap:9px;
+    
+}
+.compressed{
+    display: flex;
+    align-items: center;
+    
+    
+   justify-content: center;
+   margin:1rem;
+   gap:.4rem;
+
+}
+.compressed img{
+    
+    width: 30px;
+    height: 50px;
+    object-fit: contain;
+    
+}
+.compressed p{
+    font-weight: bold;
+    font-size: 34px;
+    color:#0e0303;
+}
+
+p.small{
+    font-size:12px;
+}
+.dontknow{
+    border-radius: 100% 100% 100% 10% / 100% 2% 100% 10% ;
+    width:100px;
+    height:170px;
+    background-color: #622323;
+}
+.others{
+    width:100%;
+    height:1000vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  
+}
+
+
+
+.popular-hotels__filter-btn {
+    padding: 10px 28px;
+  
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  
+   
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 46px;
+  
+    font-size: 16px;
+    font-weight: 300px;
+    line-height: 25px;
+    font-family: var(--plus-jakarta-sans);
+    color:var(--black-300);
+    cursor: pointer;
+  }
+  
+  .popular-hotels__filter-btn img {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+  }
+  
+  .popular-hotels__filter-btn.active {
+    background: #fff;
+    color: var(--primary-color)
+  }
+  
+  .popular-hotels__filter-btn:hover {
+    background: #fff;
+    color: var(--primary-color)
+  }
+  .bookingpagebar{
+    width:100%;
+   
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+   
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    
+    overflow: auto;
+    border-radius: 15px;
+    background-position: center;
+    height:120px;
+    
+}
+.bookingbutton{
+    margin-top:1rem;
+    width:100px;
+    justify-content: center;
+    display: flex;
+    flex-direction:column;
+    border-radius: 0% 100% 49% 51% / 0% 0% 100% 100% ;
+    
+}
+.HotelBooking{
+    width:100%;
+    height:400vh;
+}
+.animated{
+    display: flex;
+    flex-direction: column;
+    gap:4rem;
+    height:300px;
+    align-items: center;
+  min-width: 200px;
+  background-size: contain;
+  background-position: center;
+
+  
+}
+
+.animated h1{
+    margin-top: 2rem;
+    color:black;
+}
+
+.text {
+    height: 700vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    margin-top: 4rem;
+  }
+  .text p {
+    font-size: 3rem;
+    padding: 0.5rem;
+    font-weight: bold;
+    letter-spacing: 0.1rem;
+    text-align: center;
+    overflow: hidden;
+    
+ 
+  }
+  .gradinate-text{
+    
+        background-image:  linear-gradient(0deg, rgba(184,204,208,1) 49%, rgba(176,146,106,1) 99%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    
+  }
+  .text p span.typed-text {
+    font-weight: normal;
+    color: var(--fourth-color);
+   
+  }
+  .text img{
+      width:2rem;
+      margin-left: 1rem;
+      margin-right: 1rem;
+      
+  }
+  .text p span.cursor {
+    display: inline-block;
+    background-color: #ccc;
+    margin-left: 0.1rem;
+    width: 3px;
+    animation: blink 1s infinite;
+  }
+  .text p span.cursor.typing {
+    animation: none;
+  }
+  @keyframes blink {
+    0%  { background-color: #ccc; }
+    49% { background-color: #ccc; }
+    50% { background-color: transparent; }
+    99% { background-color: transparent; }
+    100%  { background-color: #ccc; }
+  }
+  .clouds{
+    display: flex;
+    flex-direction: row;
+    gap: 13rem;
+    background-image: url(/assets/map4.jpeg);
+  }
+  .cloud{ 
+    margin-top:7rem;
+    width:350px;
+    height:120px;
+    background:#ECEFF1;
+    box-shadow: 10px 10px rgba(0,0,0,0.2);
+    border-radius:100px;
+ }
+ .cloud::after, .cloud::before{
+     content:"";
+     position:relative;
+     display:inline-block;
+     background:inherit;
+     border-radius:inherit;
+ }
+ .cloud::after{
+     width:100px;
+     height:100px;
+     top:-220px;
+     left:50px;
+ }
+ .cloud::before{
+     width:180px;
+     height:180px;
+     top: -70px;
+     left:130px;
+ }
+ .compressed{
+    color:black
+ }
+ #checkindate,#checkoutdate{
+    
+    border-radius: 10px 98px 45px;
+   
+
+ }
+ .numberpeopleandrooms{
+    display: flex;
+    flex-direction: column;
+   
+
+ }
+ .numberpeopleandrooms input{
+    border-radius: 45px;
+    width:50px;
+    height:50px;
+    text-align: center;
+    font:34px bold;
+    border-color: #B0926A;
+    background-color: #000000;
+    color:#B0926A;
+ }
+ .sign-up form{
+    display: flex;
+    flex-direction: row;
+    gap:2rem;
+    justify-content: flex-start;
+    text-align: center;
+ }
+.dates{
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+   
+
+ }
+ .roomtype{
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+ }
+ .RoomsType{
+    width:40%;
+    height:40%;
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+ }
+ .compressed2{
+    display:flex;
+    flex-direction: row;
+    gap:3px;
+    width:150px;
+    height: max-content;
+    letter-spacing: 0cqi;
+    border-radius: 25px;
+    background-color: #000000;
+    color:white;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease-in-out;
+    
+ }
+ .compressed2:hover{
+    background-color:rgb(255, 255, 255) ;
+    color:burlywood;
+ }
+ 
+ .compressed2 img{
+    width:34px;
+  
+    height:60px;
+   
+    
+ }
+ 
+ .selected{
+    background-color: burlywood;
+    color: white;
+ }
+ .CheckPrice{
+    width:150px;
+    height:50px;
+    border-radius: 15px ;
+    background-color: burlywood; 
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+ }
+ .CheckPrice p{
+    text-align: center;
+    align-self: center;
+    padding-top: 1rem;
+ }
+ .BookRoom{
+    width:150px;
+    height:50px;
+    border-radius: 15px ;
+    background-color: burlywood; 
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+ }
+ .BookRoom p{
+    text-align: center;
+    align-self: center;
+    padding-top: 1rem;
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+.wrapper1 {
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+.container1 {
+    height:300px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: start;
+    
+    
+}
+
+
+.card{
+    width: 80px;
+    border-radius: .75rem;
+    background-size: cover;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 2rem;
+    margin: 0 10px;
+    display: flex;
+    align-items: flex-end;
+    transition: .6s cubic-bezier(.28,-0.03,0,.99);
+    box-shadow: 0px 10px 30px -5px rgba(0,0,0,0.8);
+    margin-top: 1rem;
+}
+.card:hover {
+    width: 400px;
+    background-image:transform scale(0.8) ;
+    
+    
+}
+.default{
+    width:400px;
+}
+
+
+
+
+
+/* When any card is hovered, change the width of the first card */
+.card-container1:hover .card:first-child {
+    width: 80px;
+}
+
+
+
+
+.card:nth-child(4):hover{
+    margin-right: 3rem;
+}
+
+
+.card > .row {
+    color: white;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.card > .row > .icon {
+    background: #223;
+    color: white;
+    border-radius: 50%;
+    width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+}
+
+.card > .row > .description {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+    height: 80px;
+    width: 520px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition-delay: .3s;
+    transition: all .3s ease;
+}
+
+.description p {
+    color: #b0b0ba;
+    padding-top: 5px;
+}
+
+.description h4 {
+    text-transform: uppercase;
+}
+
+.input2 {
+    display: none;
+}
+
+
+
+.input2:checked + label .description {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+.listing{
+    
+    display: flex;
+    flex-direction: row;
+   
+    
+   
+}
+.listing p{
+    font-size: 10px;
+}
+
+
+
+
+
+#HotelContainer{
+    width:100%;
+    height:max-content;
+   
+}
+.compressed h3 {
+    font-size:15px ;
+}
+.price{
+    font-size: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+

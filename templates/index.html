@@ -1,0 +1,286 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="hero">
+
+
+    <div class="hero-content">
+      <div class="hero-content-info" data-aos="fade-left">
+        <div class="title">
+        <div class="loading loading07">
+          
+          <span data-text="F">F</span>
+          <span data-text="R">R</span>
+          <span data-text="O">O</span>
+          <span data-text="M">M</span>
+          </div>
+          <div class="loading loading07">
+          <span data-text="E">E</span>
+          <span data-text="A">A</span>
+          <span data-text="R">R</span>
+          <span data-text="T">T</span>
+          <span data-text="H">H</span>
+        </div>
+        <div class="loading loading07">
+          <span data-text="T">T</span>
+          <span data-text="O">O</span>
+        </div>
+        <div class="loading loading07">
+          <span data-text="E">E</span>
+          <span data-text="A">A</span>
+          <span data-text="R">R</span>
+          <span data-text="T">T</span>
+          <span data-text="H">H</span>
+
+
+        </div>
+      </div>
+        <p>Leave Nostalgia When packing your bags.Adventure are calling</p>
+
+        <div class="hero-content__buttons">
+          <a  href="{{ url_for('bookingPage', countryname='Dubai', id=3) }}">
+
+            <button class="popular-hotels__filter-btn">BOOK YOUR ROOM <img   src="{{ url_for('static', filename='assets/travel.png') }}"></button>
+          </a>
+
+
+
+        </div>
+      </div>
+    </div>
+    <div class="hero-image">
+      <img src="{{url_for('static',filename="assets/IMG_2044.JPG")}}">
+    </div>
+  </section>
+</div>
+<section class="about-us" id="about-us">
+  <div class="about-us__image">
+    <div class="about-us__image-hotel3">
+      <img id="aboutimage1" >
+      <a id='hotel1link'>
+      <div class="compressed" >
+        <img src="{{ url_for('static', filename='assets/location.png') }} " alt="">
+        <p class='HotelName1' id='HotelName1'></p>
+      </div>
+      <a>
+    </div>
+
+    <button class="about-us__button">
+      <img src="{{ url_for('static', filename='assets/passport.png') }}" alt="learn more" />
+
+
+
+    </button>
+
+    <div class="about-us__image-hotel3 slideIn">
+      <img id="aboutimage2"  >
+      <a id='hotel2link'>
+      <div class="compressed">
+        <img src="{{ url_for('static', filename='assets/location.png') }}" alt="Location">
+
+        <p class='HotelName2' id='HotelName2'></p>
+      </div>
+    </a>
+
+    </div>
+  </div>
+
+  <div class="about-us__content" data-aos="fade-left">
+    <p class="sushi__subtitle">About Us </p>
+    <h3 class="sushi__title">Our mission embracing the traveler spirt in each one.</h3>
+    <p class="sushi__description">Break the screen and recall the truthest touch with nature,for the sake of uplifting
+      self uneasy,a gateway is the only gate.</p>
+  </div>
+</section>
+
+<section class="popular-hotels" id="menu">
+  <h2 class="popular-hotels__title" data-aos="flip-up">Popular Hotels</h2>
+
+  <div class="popular-hotels__filters sushi__hide-scrollbar" data-aos="fade-up">
+    <button class="popular-hotels__filter-btn active" data-filter=".all" id="all">All</button>
+    <button class="popular-hotels__filter-btn" data-filter=".Roma" id="Roma">
+
+      <img src="{{ url_for('static', filename='assets/colosseum.png') }}" alt="" />
+      Roma
+    </button>
+    <button class="popular-hotels__filter-btn" data-filter=".Paris" id="Paris">
+      <img src="{{ url_for('static', filename='assets/eiffel-tower.png') }}" alt="" />
+
+      Paris
+    </button>
+    <button class="popular-hotels__filter-btn" data-filter=".Dubia" id="Dubai">
+      <img src="{{ url_for('static', filename='assets/burj-khalifa.png') }}" alt="" />
+
+      Dubai
+    </button>
+    <button class="popular-hotels__filter-btn" id="Lebanon">
+      <img src="{{ url_for('static', filename='assets/lebanon.png') }}" alt="" />
+
+      Lebanon
+    </button>
+    <button class="popular-hotels__filter-btn" id="Turkey">
+      <img src="{{ url_for('static', filename='assets/blue-mosque.png') }}" alt="" />
+
+      Turkey
+    </button>
+    <button class="popular-hotels__filter-btn" id="New York">
+      <img src="{{ url_for('static', filename='assets/statue-of-liberty.png') }}" alt="" />
+
+      New York
+    </button>
+  </div>
+
+  <div class="popular-hotels__catalogue" data-aos="fade-up">
+
+    <div class="hotels-default" class="all" id="popularcontainer">
+
+         
+    </div>
+    
+
+  </div>
+  <a  href="{{ url_for('bookingPage', countryname="", id="") }}">
+    <button class="popular-hotels__button">
+      Explore Hotels
+    
+      <img src="{{ url_for('static', filename='assets/arrow-right.svg') }}" alt="arrow-right" />
+    </button>
+
+
+  </a>
+
+</section>
+<section class="wheretogo">
+  <div class="container">
+    <p>WHERE TO GO? <span class="typed-text"></span><span class="cursor">&nbsp;</span></p>
+
+  </div>
+  <a href="{{url_for("wheretogoPage")}}">
+    <button class="popular-hotels__button2">
+      Where to go survey
+     
+      <img src="{{ url_for('static', filename='assets/arrow-right.svg') }}" alt="arrow-right" />
+    </button>
+  </a>
+
+
+</section>
+
+
+<section class="subscription flex-center" id="services">
+  <h2 data-aos="flip-down">
+    Get offers straight <br />
+    to your inbox
+  </h2>
+  <p data-aos="fade-up">Sign up for the Solo newsletter</p>
+
+  <div class="subscription__form" data-aos="fade-up">
+    <input type="text" placeholder="Enter your email address" />
+    <button class="confetti-button">Get Started</button>
+  </div>
+</section>
+
+
+
+<script type="module" src="{{url_for('static',filename="js/script.js")}}"></script>
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', () => { 
+  fetch('/api/hotels/toprated?BudgetCategory=Luxury').then(
+    response =>response.json()).then(
+    data=>{
+     
+      console.log(data)
+      const hotel = document.getElementById('HotelName1');
+      const hotelimage=document.getElementById('aboutimage1');
+      const link=document.getElementById('hotel1link')
+hotel.innerText = data[0].title;
+hotelimage.setAttribute('src',`${data[0].images[0]}`);
+      link.setAttribute('href',`/HotelsPage?countryname=${ data[0].country }&id=${ data[0].id }`)
+  
+  
+    
+      
+
+    }
+  ).catch(
+    error=>console.log('error',error)
+  )
+
+  fetch('/api/hotels/toprated?BudgetCategory=Mid-range').then(
+    response =>response.json()).then(
+    data=>{
+     
+      console.log(data)
+      const hotel2 = document.getElementById('HotelName2');
+      const hotelimage2=document.getElementById('aboutimage2');
+      const link2=document.getElementById('hotel2link')
+hotel2.innerText = data[0].title;
+hotelimage2.setAttribute('src',`${data[0].images[0]}`)
+link2.setAttribute('href',`/HotelsPage?countryname=${ data[0].country }&id=${ data[0].id }`)
+    
+      
+
+    }
+  ).catch(
+    error=>console.log('error',error)
+  )
+  });
+</script>
+
+<script>
+
+
+
+
+    const typedTextSpan = document.querySelector(".typed-text");
+    const cursorSpan = document.querySelector(".cursor");
+
+    const textArray = ["Roma", "Paris", "Turkey", "Lebanon", "", "Dubai", "New York"];
+    const typingDelay = 200;
+    const erasingDelay = 100;
+    const newTextDelay = 2000; 
+    let textArrayIndex = 0;
+    let charIndex = 0;
+
+    function type() {
+      if (charIndex < textArray[textArrayIndex].length) {
+        if (!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+        typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+        charIndex++;
+        setTimeout(type, typingDelay);
+      }
+      else {
+        cursorSpan.classList.remove("typing");
+        setTimeout(erase, newTextDelay);
+      }
+    }
+
+    function erase() {
+      if (charIndex > 0) {
+        if (!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+        typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex - 1);
+        charIndex--;
+        setTimeout(erase, erasingDelay);
+      }
+      else {
+        cursorSpan.classList.remove("typing");
+        textArrayIndex++;
+        if (textArrayIndex >= textArray.length) textArrayIndex = 0;
+        setTimeout(type, typingDelay + 1100);
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", function () { // On DOM Load initiate the effect
+      if (textArray.length) setTimeout(type, newTextDelay + 250);
+    });
+
+
+
+
+
+
+
+  </script>
+  {%endblock%}

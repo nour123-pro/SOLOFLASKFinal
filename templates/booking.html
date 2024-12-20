@@ -1,0 +1,125 @@
+{% extends "base.html" %}
+
+{% block content%}
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<link rel="stylesheet" href="{{url_for('static',filename="css/booking.css")}}">
+<body>
+<div class="animated">
+      
+    <div class="text" >
+     
+      <p class="gradinate-text">Pack Your<img src=" {{ url_for('static', filename='assets/suitcase.png') }}" alt=""><span class="typed-text"></span><span class="cursor">&nbsp;</span></p>
+      </a>
+    </div>
+  </div>
+ 
+ 
+  <div class="popular-hotels__filters sushi__hide-scrollbar bookingpagebar" data-aos="fade-up">
+      
+      <button class="popular-hotels__filter-btn  bookingbutton" data-filter="BookingRoma" id="Roma">
+        <img src="{{ url_for('static', filename='assets/colosseum.png') }}" alt="" />
+        Roma
+      </button>
+      <button class="popular-hotels__filter-btn bookingbutton"  data-filter="BookingParis" id="Paris">
+        <img src="{{ url_for('static', filename='assets/eiffel-tower.png') }}" alt="" />
+        Paris
+      </button>
+      <button class="popular-hotels__filter-btn bookingbutton"  data-filter="BookingDubia" id="Dubai">
+        <img src="{{ url_for('static', filename='assets/burj-khalifa.png') }}" alt="" />
+        Dubai
+      </button>
+      <button class="popular-hotels__filter-btn bookingbutton" id="Lebanon" data-filter="BookingLebanon">
+        <img src="{{ url_for('static', filename='assets/lebanon.png') }}" alt="" />
+        Lebanon
+      </button>
+      <button class="popular-hotels__filter-btn bookingbutton" id="Turkey" data-filter="BookingTurkey">
+        <img src="{{ url_for('static', filename='assets/blue-mosque.png') }}" alt="" />
+       Turkey
+      </button>
+      <button class="popular-hotels__filter-btn bookingbutton" id="New York" data-filter="BookingNewYork">
+        <img src="{{ url_for('static', filename='assets/statue-of-liberty.png') }}" alt="" />
+          New York
+        </button>  
+  </div>
+ 
+<div class="hotels">
+<div class="HotelBooking" id="HotelContainer"></div>
+</div>
+</body>
+
+
+<script src="{{url_for("static",filename='js/booking.js')}}"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+const typedTextSpan = document.querySelector(".typed-text");
+      const cursorSpan = document.querySelector(".cursor");
+      
+      const textArray = ["Memories", "Adventure", "Asthetics Pinterest Pictures"];
+      const typingDelay = 200;
+      const erasingDelay = 100;
+      const newTextDelay = 2000; 
+      let textArrayIndex = 0;
+      let charIndex = 0;
+      
+      function type() {
+        if (charIndex < textArray[textArrayIndex].length) {
+          if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+          typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+          charIndex++;
+          setTimeout(type, typingDelay);
+        } 
+        else {
+          cursorSpan.classList.remove("typing");
+          setTimeout(erase, newTextDelay);
+        }
+      }
+      
+      function erase() {
+        if (charIndex > 0) {
+          if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+          typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex-1);
+          charIndex--;
+          setTimeout(erase, erasingDelay);
+        } 
+        else {
+          cursorSpan.classList.remove("typing");
+          textArrayIndex++;
+          if(textArrayIndex>=textArray.length) textArrayIndex=0;
+          setTimeout(type, typingDelay + 1100);
+        }
+      }
+      document.addEventListener("DOMContentLoaded", function() { // On DOM Load initiate the effect
+        if(textArray.length) setTimeout(type, newTextDelay + 250);
+      });
+
+      
+ 
+        
+</script>
+<script>
+
+document.addEventListener('DOMContentLoaded', async function() {
+
+let container=document.getElementById("HotelContainer")
+let country = "{{ country }}";
+console.log(country)
+await displayHotels(country)
+setTimeout(()=>{
+    id="{{id}}"
+    let card1=document.getElementById(id)
+    if (card1) {
+        card1.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      } else {
+        console.error("Element with ID  not found.");
+      }
+},1000)
+
+
+
+});
+
+</script>
+
+
+{% endblock%}  

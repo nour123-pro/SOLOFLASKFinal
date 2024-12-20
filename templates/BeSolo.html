@@ -1,0 +1,86 @@
+
+   
+   
+
+
+
+
+{% extends "base.html" %}
+
+{% block content %}
+<link rel="stylesheet" href="{{url_for('static',filename="css/BeSolo.css")}}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
+<script>
+  // Pass has_reservation to a JavaScript variable
+  var hasReservation = {{ 'true' if has_reservation else 'false' }};
+</script>
+
+
+<body>
+     
+    <div class="Posting {% if not current_user.is_authenticated  %}blured{% else %}{% endif %}"  >
+        <div class="popular-hotels__filters sushi__hide-scrollbar Postingpagebar" data-aos="fade-up">
+          <button class="popular-hotels__filter-btn  Postbutton" >
+            <img src="./static/assets/love-message.png" alt="" />
+          
+          </button>
+            <button class="popular-hotels__filter-btn  Countrybutton" id="Roma">
+              <img src="./static/assets/colosseum.png" alt="" />
+            
+            </button>
+            <button class="popular-hotels__filter-btn Countrybutton"   id="Paris">
+              <img src="./static/assets/eiffel-tower.png" alt="" />
+            
+            </button>
+            <button class="popular-hotels__filter-btn Countrybutton"  id="Dubai">
+              <img src="./static/assets/burj-khalifa.png" alt="" />
+             
+            </button>
+            <button class="popular-hotels__filter-btn Countrybutton" id="Lebanon" >
+              <img src="./static/assets/lebanon.png" alt="" />
+             
+            </button>
+            <button class="popular-hotels__filter-btn Countrybutton" id="Turkey">
+              <img src="./static/assets/blue-mosque.png" alt="" />
+           
+            </button>
+            <button class="popular-hotels__filter-btn Countrybutton" id="New York" >
+                <img src="./static/assets/statue-of-liberty.png" alt="" />
+               
+            </button>  
+            
+            
+
+        </div>
+        <div class="BigContainer" id="BigContainer">
+        
+          
+        </div>
+        
+        
+        
+    </div>
+    
+  
+    <script>
+      const user = {
+        firstName: "{{ user.FirstName }}",
+        lastName: "{{ user.LastName }}",
+        id: "{{ user.UserID }}",
+        hasreservation:{{has_reservation|tojson}},
+       
+        passeddate:{{checkout_passed|tojson}},
+        hotelname:{{hotelname|tojson}}
+       
+    };
+    console.log(user);
+    
+    </script>
+    <script src="{{ url_for('static', filename='js/BeSolo.js') }}"></script>
+
+
+  
+  
+   
+</body>
+{% endblock content %}

@@ -1,0 +1,227 @@
+{% extends "base.html" %}
+{% block content %}
+<link rel="stylesheet" href="{{url_for('static',filename="css/ticket.css")}}" />
+
+<style>
+    .confetti-button{
+        cursor: pointer;
+    }
+</style>
+
+<form  method="POST" class="form">
+   
+    <h2 class="text-center">Confirming</h2>
+    
+    
+
+   
+    <div class="progressbar">
+        <div class="progress" id="progress"></div>
+        <div class="progress-step progress-step-active" data-title="Reservation"></div>
+        <div class="progress-step" data-title="Payment"></div>
+        <div class="progress-step" data-title="Confirm"></div>
+        
+    </div>
+
+   
+    
+    <!-- Form item - Social -->
+    <div class="form-step form-step-active">
+        <div class="ticket ">
+            <div class="left">
+                <div class="image" style="background-image: url('/{{ hotel_image }}');">
+                   
+                   <div class="ticket-number">
+                    <p></p>
+                    </div>
+                </div>
+                <div class="ticket-info">
+                    <p class="date">
+                        <label for="">CHECK IN </label>
+                        <span class="checkinday">{{checkin_day_name}}</span>
+                        <span class="checkindate">{{checkin_month}}{{checkin_day}}</span>
+                        <span class="checkinyear">{{checkin_year}}</span>
+                        
+
+                        <label for="">CHECK out </label>
+                        <span class="checkoutday">{{checkout_day_name}}</span>
+                        <span class="checkoutdate">{{checkout_month}}{{checkout_day}}</span>
+                        <span class="checkoutyear">{{checkout_year}}</span>
+                    </p>
+                    <div class="show-name HotelName">
+                        <h1>{{hotel_name}}</h1>
+                        <div class="compressed">
+                            <img src="{{url_for('static',filename="assets/location.png")}}" alt="">
+                            <p>{{hotel.Location}}</p>
+                        </div> 
+                        <h2 class="CLinetName">{{User}}</h2>
+                    </div>
+                    <div class="time">
+                        
+                        <p class="RoomType">Room Type<span>@</span> {{room_type}}</p>
+                        <p class="RoomNumber">Number Of Room<span>@</span> {{number_room}}</p>
+                        <p class="NumberPeople">Number Of People<span>@</span>{{number_people}}</p>
+                    </div>
+                    <div class="location end">
+                        <span>ENJOY YOUR VACATION</span>
+                        <span class="separator">
+                            <i class="far fa-smile"></i></span>
+                            <div class="greets">
+                            <p>Greets from Solo team</p>
+                            
+                        </div>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <p class="admit-one">
+                    <span>SOLO</span>
+                    <span>SOLO</span>
+                    <span>SOLO</span>
+                    <span>SOLO</span>
+                    
+                </p>
+                <div class="right-info-container">
+                    <div class="show-name">
+                        <h1>{{User}}</h1>
+                    </div>
+                    <div class="time">
+                        <p>Total Price <span>$</span>{{total_price}}</p>
+                        
+                    </div>
+                    <div class="barcode">
+                        <img src="https://external-preview.redd.it/cg8k976AV52mDvDb5jDVJABPrSZ3tpi1aXhPjgcDTbw.png?auto=webp&s=1c205ba303c1fa0370b813ea83b9e1bddb7215eb" alt="QR code">
+                    </div>
+                    <p class="ticket-number">
+                      {{id}}
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="btns-group">
+           
+            <a href="/HotelsPage?countryname={{ country }}&id={{ id }}" class="btn btn-prev"></a>
+
+            <a href="#" class="btn btn-next"></a>
+           
+        </div>
+    </div>
+
+    <!-- Form item - Password -->
+    <div class="form-step">
+        <div class="card">
+        <div class="container4">
+            <div class="card front-face" id="cardout">
+              <div class="starter">
+                  <h1 class="credittype">Master Card</h1>
+                  <img src="{{ url_for('static', filename='assets/chip.png') }}" alt="">
+
+              </div>
+              <div class="bottom">
+                  <div class="creditinfo">
+                      <input type="number" class="creditcardnumber" placeholder="card serial number">
+                      <input type="text" class="creditcardownername" placeholder="Your Name">
+  
+                  </div>
+                 <div class="cardimage">
+                    <img src="{{ url_for('static', filename='assets/mastercard.png') }}" alt="">
+
+                 </div>
+              </div>
+              
+              
+             
+            </div>
+            <div class="card back-face" id="cardin">
+              <span class="magnetic-strip"></span>
+              <div class="signature"><input  class="CVC"type="number" maxlength="3" minlength="3" placeholder="CVC"></div>
+  
+              <h6>
+                For customer service call +977 4343 3433 or email at
+                mastercard@gmail.com
+              </h6>
+              
+              <h5>
+               
+              </h5>
+            </div>
+          </div>
+          </div>
+        <div class="btns-group ">
+            
+            <a href="#" class="btn btn-prev"></a>
+            <a href="#" class="btn btn-next" id='paymentbutton'></a>
+           
+        </div>
+    </div>
+
+
+    <div class="form-step">
+        <div class="Reminder">
+           
+                <div class="white">
+                    <div class="countryImage">
+                        <img src="/{{hotel_image}}" alt="">
+                    </div>
+                    <div class="compressed">
+                        <img  src="{{url_for('static',filename="assets/location.png")}}">
+                        <p>{{hotel.Location}}</p>
+                    </div>
+                    <div class="Text">
+                        <div class="loading loading07">
+        
+                            <span data-text="R">R</span>
+                            <span data-text="E">E</span>
+                            <span data-text="M">M</span>
+                            <span data-text="I">I</span>
+                            <span data-text="N">N</span>
+                            <span data-text="D">D</span>
+                            <span data-text="E">E</span>
+                            <span data-text="R">R</span>
+                        </div>
+                        <div class="Notification">
+                            <p>Click The Bell For Reminder Notification</p>
+                            <div class="confetti-button">
+        
+                                <img src="{{url_for('static',filename="assets/bell.png")}}" alt="" id="bellicon">
+                            </div>
+                    </div>
+
+                </div>
+                          
+                   
+                 
+            </div>
+                    
+        </div>
+                <div class="btns-group ">
+           
+                    <a href="#" class="btn btn-prev"></a>
+                    <a href="/api/Hotels/ReservationConfirm?hotelid={{hotel.ID}}&checkindate={{check_in_date_str}}&checkoutdate={{check_out_date_str}}&roomtype={{room_type}}&numberpeople={{number_people}}&numberroom={{number_room}}" class="btn btn-end"></a>
+                 
+                   
+                </div>
+        </div>
+        
+    </div>
+</form>
+
+<script src="{{url_for('static',filename="js/ticket.js")}}"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    var userName = "{{User}}"; 
+    $(".confetti-button").click(function(){
+        if ($("#bellicon").attr("src") === "/static/assets/notification.png") {
+            $("#bellicon").attr("src", "/static/assets/bell.png");
+           
+        } else {
+            $("#bellicon").attr("src", "/static/assets/notification.png");
+            window.alert('Welcome '+ userName+' to Solo,Enjoy your vacation');
+        }
+    });
+</script> 
+ 
+{% endblock %}
+
+    

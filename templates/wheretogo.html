@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block content%}
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+<link rel="stylesheet" href="{{url_for("static",filename="css/wheretogo.css")}}">
+<style>
+  
+        #map-container {
+          width: 50%;
+          height: 100%;
+      }
+</style>
+
+<section class='main'>
+    <div class="quiz-container" id="quiz">
+        
+            
+    
+            
+       
+        <div class="quiz-header">
+          <h2 id="question">Question Text</h2>
+
+          <div class="answer-container">
+            <div class="answer" id="a">
+                <label for="a" id="a_text"></label>
+                <img src="" alt="" id="icon1" class="icon">
+            </div>
+            <div class="answer" id="b">
+                <label for="b" id="b_text" ></label>
+                <img src="" alt="" id="icon2" class="icon">
+            </div>
+            <div class="answer" id="c">
+                <label for="c" id="c_text"></label>
+                <img src="" alt="" id="icon3" class="icon">
+            </div>
+            <div class="answer" id="d">
+                <label for="d" id="d_text"></label>
+                <img src="" alt="" id="icon4" class="icon">
+            </div>
+          </div>
+        </div>
+        <button id="submit">Submit</button>
+    </div>
+    <div id="map-container"></div>
+  </section>
+  
+<script src="{{url_for('static',filename="js/wheretogo.js")}}"></script>
+<!-- Leaflet JavaScript -->
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>    
+{% endblock %}

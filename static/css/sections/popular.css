@@ -1,0 +1,237 @@
+.popular-hotels {
+    
+  
+    display: flex;
+    flex-direction: column;
+  
+   
+    border-style: groove;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  
+    overflow: hidden;
+    background-color:#C2CFD8;
+    
+   
+    position:relative;
+    background-position: center;
+    background-size: cover;
+    padding: 2rem 1rem;
+		border: 1rem solid accentColor;
+		border-image: repeating-linear-gradient(45deg, transparent, transparent 5px, beige 6px, beige 15px, transparent 16px, transparent 20px) 20/1rem;
+    align-items: center;
+  }
+  
+  .popular-hotels__title {
+    font-size: 56px;
+    font-family: var(--playfair-display);
+    font-weight: 600;
+    line-height: 78px;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .popular-hotels__filters {
+    margin-top: 48px;
+    max-width: 100%;
+    overflow-x: auto;
+  
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+  }
+  
+  .popular-hotels__filter-btn {
+    padding: 10px 28px;
+  
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  
+   
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 46px;
+  
+    font-size: 16px;
+    font-weight: 300px;
+    line-height: 25px;
+    font-family: var(--plus-jakarta-sans);
+    color:var(--black-300);
+    cursor: pointer;
+  }
+  
+  .popular-hotels__filter-btn img {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+  }
+  
+  .popular-hotels__filter-btn.active {
+    background: #fff;
+    color: var(--primary-color)
+  }
+  
+  .popular-hotels__filter-btn:hover {
+    background: #fff;
+    color: var(--primary-color)
+  }
+  
+  .hotels-default{
+    margin-top: 64px;
+  
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 56px;
+    image-resolution: 100%;
+  }
+
+.ParisHotels[hidden] {
+    display: none !important;
+}
+
+  .ParisHotels{
+    margin-top: 64px;
+  
+    display: flex;
+    justify-content:flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 56px;
+    image-resolution: 100%;
+  }
+  
+  
+
+  .popular-hotels__button {
+    width: fit-content;
+  
+    padding: 20px 30px;
+    margin: 80px auto 0;
+  
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 23px;
+    font-family: var(--plus-jakarta-sans);
+    color: #fff;
+  
+    border: none;
+    outline: none;
+    background:var(--black-300) ;
+    border-radius: 64px;
+    cursor: pointer;
+  }
+  
+  .popular-hotels__button img {
+    width: 14px;
+    height: 14px;
+    object-fit: contain;
+  
+    margin-left: 21px;
+  }
+  
+  .popular-hotels__card {
+    padding: 38px;
+    min-width: 260px;
+    height: fit-content;
+  
+    display: flow-root;
+    align-items: center;
+    flex-direction: column;
+  
+    border-radius: 36px;
+    background: radial-gradient(circle at 10% 20%, rgb(239, 246, 249) 0%, rgb(206, 239, 253) 90%);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: 0.8s cubic-bezier(0.22, 0.78, 0.45, 1.02);
+    box-shadow: 28px 28px 45px #d4d4d4 -28px -28px 45px white;
+    background-size: cover; 
+    backdrop-filter: blur(5.5px);
+    -webkit-backdrop-filter: blur(5.5px);
+    max-width: 300px;
+   
+  }
+  .popular-hotels__card:hover{
+    transform: scale(1.03);
+  }
+  
+  .popular-hotels__card-image {
+  
+   
+    width: 100%;
+    height:250px;
+    border-radius: 16px;
+    
+   
+    background-size: contain; 
+    border-radius: 15px;
+    background: #4a1616;
+    
+   
+    
+  }
+  
+  .popular-hotels__card-title {
+    margin-top: 47px;
+  
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 32px;
+    font-family: var(--playfair-display);
+    color: #fff;
+    text-align: center;
+  }
+  
+  .popular-hotels__card-details {
+    width: 100%;
+    margin-top: 32px;
+  }
+  
+  .popular-hotels__card-rating {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .popular-hotels__card-rating img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+  }
+  
+  .popular-hotels__card-rating p {
+    font-size: 20px; 
+    font-weight: 300;
+    font-family: var(--plus-jakarta-sans);
+    color: #241212;
+  }
+  .hidden{
+    display: none !important;
+  }
+  
+  .popular-hotels__card-price {
+    font-size: 20px; 
+    font-weight: 500;
+    font-family: var(--plus-jakarta-sans);
+    color: #4a1616;
+  }
+  
+  
+  
+  .popular-hotels__card-details.flex-between{
+    gap: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  #popularcontainer{
+    width:100%;
+    height:fit-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+ 

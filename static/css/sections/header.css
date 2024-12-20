@@ -1,0 +1,215 @@
+@import url(' https://fonts.cdnfonts.com/css/parisienne ');
+@import url('https://fonts.googleapis.com/css2?family=Corinthia:wght@400;700&display=swap');
+@import url('https://fonts.cdnfonts.com/css/avenue');
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap");
+@import url('https://fonts.cdnfonts.com/css/signpainter');
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+Great+Primer+SC&display=swap');
+@import url('https://fonts.cdnfonts.com/css/dm-serif-display');
+@font-face {
+    font-family: 'Dream Avenue';
+    src: url('path/to/dream-avenue-font.woff2') format('woff2'),
+         url('path/to/dream-avenue-font.woff') format('woff');
+    /* Add additional font formats (eot, ttf) if available */
+    font-weight: normal;
+    font-style: normal;
+}
+:root{
+  --playfair-display:'DM Serif Display', sans-serif;                                                                    
+  --plus-jakarta-sans: "Plus Jakarta Sans", sans-serif;
+
+  --primary-color:#EADBC8;
+  --secondary-color:#C2CFD8;
+
+  --black-200: black;
+  --black-300:#B0926A;
+  --black-400:white;
+  --black-500: #fae0e4;
+  --gray-100:#bbdefb;
+
+  --color-white: #C2CFD8;
+  --color-creamson:#F8F0E5;
+}
+
+.header__nav {
+  display: flex;
+  overflow: hidden;
+  background-color: #fff;
+  width: 100%;
+  
+
+  margin-top: auto;
+  
+  
+  
+ 
+}
+
+
+.header__logo {
+  flex: 1;
+  display: flex;
+  background-color: var(--plus-jakarta-sans);
+  position: relative;
+  padding: 20px;
+  font-family: "IM Fell Great Primer SC",sans-serif;
+}
+
+.header__logo-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+
+  
+  z-index: -1;
+}
+
+.header__logo h4 {
+  padding-left: 30px;
+
+  font-weight: 700;
+  font-size: 30px;
+  text-transform: uppercase;
+                                                                  
+  font-family: "IM Fell Great Primer SC", serif; ;
+  font-weight: bold;                                      
+  color:black;
+  
+}
+
+.header__menu, .header__menu-mobile {
+  padding: 5px;
+  flex: 1.236;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 9px;
+  
+  
+  list-style: none;
+}
+
+.header__menu li {
+  padding: 10px 28px;
+  
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  
+   
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 46px;
+  
+    font-size: 16px;
+    font-weight: 300px;
+    line-height: 25px;
+    font-family: var(--plus-jakarta-sans);
+    color:var(--black-300);
+    cursor: pointer;
+    background-color:white;
+    opacity: .6;
+    align-content: space-evenly;
+
+}
+.header__menu li:hover{
+  background: #fff;
+  color: var(--primary-color)
+}
+.header__menu li:hover{
+  transform: scale(1.3);
+  background-color: aliceblue;
+}
+
+.header__menu li img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.header__menu-mobile {
+  display: none;
+  gap: 20px;
+
+  position: relative;
+}
+
+
+@media screen and (max-width: 900px) {
+  .header__nav {
+    background: var(--primary-color);
+  }
+
+  .header__menu {
+    display: none;
+  }
+
+  
+  }
+
+
+
+
+
+
+  
+  
+  
+
+
+@media screen and (max-width: 550px) {
+  .header__logo {
+    padding-left: 0;
+  }
+
+}
+
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.sushi__subtitle {
+  font-size: 18px;
+  font-weight: 400;
+  font-family: var(--plus-jakarta-sans);
+
+  color: var(--primary-color);
+  opacity: 0.8;
+
+  letter-spacing: -0.01em;
+}
+
+.sushi__title {
+  font-size: 64px;
+  font-weight: 600;
+  font-family: var(--playfair-display);
+
+  color: var(--secondary-color);
+
+  margin-top: 16px;
+}
+
+.sushi__description {
+  font-size: 18px;
+  font-weight: 400;
+  font-family: var(--plus-jakarta-sans);
+
+  line-height: 36px;
+  letter-spacing: -0.01em;
+
+  color: var(--secondary-color);
+  opacity: 0.8;
+
+  margin: 32px 0px;
+}

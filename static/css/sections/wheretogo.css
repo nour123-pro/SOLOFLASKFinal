@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.cdnfonts.com/css/avenue');
+@font-face {
+    font-family: 'Dream Avenue';
+    src: url('path/to/dream-avenue-font.woff2') format('woff2'),
+         url('path/to/dream-avenue-font.woff') format('woff');
+    /* Add additional font formats (eot, ttf) if available */
+    font-weight: normal;
+    font-style: normal;
+}
+.wheretogo{
+    display: flex;
+    flex-direction: column;
+    gap:4rem;
+    height:300px;
+    align-items: center;
+  min-width: 200px;
+  background-size: contain;
+  background-position: center;
+  background-image: url(/static/assets/it.png);
+   
+}
+.container {
+  height: 700vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  margin-top: 4rem;
+  min-width: fit-content;
+  
+}
+.container p {
+  font-size: 3rem;
+  padding: 0.5rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  text-align: center;
+  overflow: hidden;
+  font-family: "Dream Avenue",sans-serif;
+  color:white;
+}
+.container p span.typed-text {
+  font-weight: normal;
+  color: #a39cf0;
+ 
+}
+.container p span.cursor {
+  display: inline-block;
+  background-color: #ccc;
+  margin-left: 0.1rem;
+  width: 3px;
+  animation: blink 1s infinite;
+}
+.container p span.cursor.typing {
+  animation: none;
+}
+@keyframes blink {
+  0%  { background-color: #ccc; }
+  49% { background-color: #ccc; }
+  50% { background-color: transparent; }
+  99% { background-color: transparent; }
+  100%  { background-color: #ccc; }
+}
+
+
+.popular-hotels__button2 {
+    width: fit-content;
+  
+    padding: 20px 30px;
+    margin: 80px auto 0;
+  
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 23px;
+    font-family: var(--plus-jakarta-sans);
+    color: #fff;
+  
+    border: none;
+    outline: none;
+    background:rgb(123, 83, 83) ;
+    font-family: "Dream Avenue",sans-serif;
+    border-radius: 64px;
+    cursor: pointer;
+  }
+  
+  .popular-hotels__button2 img {
+    width: 14px;
+    height: 14px;
+    object-fit: contain;
+  
+    margin-left: 21px;
+  }
